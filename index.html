@@ -97,10 +97,13 @@
         });
     </script>
     <script>
-        if (screen.orientation) {
+        if (screen.orientation && screen.orientation.lock) {
+            // Bloquea la orientación en modo retrato (vertical)
             screen.orientation.lock("portrait").catch(function(error) {
-                console.log("La orientación no se pudo bloquear: ", error);
+                console.log("No se pudo bloquear la orientación: ", error);
             });
+        } else {
+            console.log("La API de bloqueo de orientación no está soportada por este navegador.");
         }
     </script>
 </body>
