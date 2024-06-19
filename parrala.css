@@ -1,0 +1,303 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-image: url(https://media.istockphoto.com/id/1281811646/es/foto/fondo-de-textura-de-tela-blanca-abstracta-onda-suave-de-tela-pliegues-de-sat%C3%A9n-seda-y-algod%C3%B3n.jpg?s=612x612&w=0&k=20&c=227BENK_h7RQQwaKuFDdJLJkr1w_ZaYMmTyQUb5vtTM=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    max-width: 100%;
+}
+
+header .logo img {
+    height: 70px;
+    border-radius: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline solid white;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .social-media a {
+    color: white;
+    margin-left: 10px;
+    margin-right: 50px;
+    max-width: 100%;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero .swiper-container {
+    width: 100%;
+    height: 100vh; /* Mantener la altura consistente */
+    overflow: hidden; /* Esconder el desbordamiento para que las imágenes no cambien el tamaño del contenedor */
+}
+
+.hero .swiper-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Asegura que las imágenes cubran todo el área del contenedor sin cambiar la relación de aspecto */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Asegura que el texto esté sobre las imágenes */
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 0;
+    text-shadow: 4px 4px 4px black;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hero-text h3 {
+    font-size: 18px;
+    margin: 0;
+    text-shadow: 4px 4px 4px black;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: red;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.about-text {
+    width: 70%;
+    margin-left: 120px;
+}
+
+.contact-info {
+    width: 25%;
+    border: solid black 2px;
+    padding: 20px;
+    text-align:center;
+    margin-right: 80px;
+    background-color: rgb(226, 226, 226);
+    box-sizing: border-box; /* Añadido aquí */
+}
+
+.contact-info a {
+    color: blue;
+    text-decoration: none;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.video-container {
+    width: 75%;
+}
+
+video {
+    width: 90%;
+    height: 90%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Tablets */
+@media (min-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header .logo img {
+        height: 70px;
+    }
+
+    .about {
+        flex-direction: row;
+    }
+
+    .about-text {
+        width: 70%;
+    }
+
+    .contact-info {
+        width: 25%;
+    }
+
+    .video-container {
+        max-width: 100%; /* Ajusta el tamaño máximo del contenedor del video al 100% del ancho disponible */
+        margin-left: auto; /* Centra el contenedor horizontalmente */
+        margin-right: auto;
+        height: 400px;
+    }
+
+    .video-container iframe {
+        width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
+        height: 100%; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    }
+
+}
+
+/* Móviles */
+@media (max-width: 767px){
+    body, html {
+        overflow-x: hidden;
+    }
+
+    body {
+        text-align: center; /* Centrar todo el contenido */
+    }
+
+    header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    header .social-media {
+        margin-top: 30px;
+    }
+
+    header nav ul {
+        flex-direction: row;
+    }
+
+    header nav ul li {
+        margin-top: 30px;
+        margin-right: 20px;
+    }
+
+
+    .contact-info {
+        margin-top: 20px; /* Espacio entre los menús y la sección de contacto */
+        width: 70%; /* Ancho reducido para dejar espacio para los menús */
+        margin-left: auto; /* Centrar la sección de contacto */
+        margin-right: auto;
+    }
+
+    .hero {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    
+    .hero .swiper-container {
+        width: 100%;
+        height: 50vh; /* Mantener la altura consistente */
+        overflow: hidden; /* Esconder el desbordamiento para que las imágenes no cambien el tamaño del contenedor */
+    }
+    
+    .hero .swiper-slide img {
+        width: 100%;
+        height: 35vh;
+        object-fit: cover; /* Asegura que las imágenes cubran todo el área del contenedor sin cambiar la relación de aspecto */
+    }
+    
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10; /* Asegura que el texto esté sobre las imágenes */
+    }
+
+    .hero-text h1 {
+        font-size: 24px; /* Ajustar tamaño de fuente para dispositivos móviles */
+        margin: 0; /* Ajustar margen para evitar espacio adicional */
+    }
+
+    .hero-text h3 {
+        font-size: 16px; /* Ajustar tamaño de fuente para dispositivos móviles */
+        margin: 0; /* Ajustar margen para evitar espacio adicional */
+    }
+
+    .about {
+        padding: 20px;
+    }
+
+    .hero img {
+        margin-top: 90px;
+    }
+
+    .about-text {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        margin: 0 auto; /* Centrar horizontalmente */
+        text-align: left; /* Alinear el texto a la izquierda */
+    }
+
+    .video-container {
+        max-width: 100%; /* Ajusta el tamaño máximo del contenedor del video al 100% del ancho disponible */
+        margin-left: auto; /* Centra el contenedor horizontalmente */
+        margin-right: auto;
+    }
+
+    .video-container iframe {
+        width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
+        height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
